@@ -1,3 +1,5 @@
+$breakpoint: 600px;
+
 .navcontainer {
   display: flex;
   align-items: center;
@@ -7,6 +9,10 @@
   &_left {
     width: 5%;
     cursor: pointer;
+
+    @media screen and (max-width: $breakpoint) {
+      width: 15%;
+    }
 
     &-logo {
       width: 100%;
