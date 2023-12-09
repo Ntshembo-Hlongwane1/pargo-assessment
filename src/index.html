@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#fff" />
+    <title>Pargo Delivery</title>
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker
+          .register('sw.js')
+          .then(() => {
+            console.log('Worker Started!');
+          })
+          .catch((error) => {
+            console.log('Worker Failed To Start!', error);
+          });
+      });
+    }
+  </script>
+</html>
